@@ -1,6 +1,7 @@
 (function(){
     var points
     var time
+    var gameIntervalId
 
     function addPoint(){
         points++
@@ -48,6 +49,21 @@
         mole = makeMole()
         displayPoints(points)
         displayTime(time)
+
+        gameIntervalId = setInterval(
+            function(){
+                mole.remove()
+
+                displayTime(time--)
+                if (time == 0){
+                    clearInterval(gameIntervalId)
+                    window.alert('Time is gone, your score: ' + points)
+                }else{
+                    mole = makeMole()
+                }
+            },
+            1000
+        )
     }
 
     init()
