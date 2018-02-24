@@ -13,6 +13,11 @@
         pointsContainer.innerText = "Score: " + pointsParam
     }
 
+    function displayTime(timeParam){
+        var pointsContainer = document.querySelector('.time')
+        pointsContainer.innerText = "Time: " + timeParam
+    }
+
     function makeMole(){
         var molePosX = Math.round(
             Math.random() * (window.innerWidth - window.innerHeight / 10)
@@ -42,9 +47,8 @@
         time = 10
         mole = makeMole()
         displayPoints(points)
+        displayTime(time)
     }
 
     init()
-
-    makeMole()
 })()

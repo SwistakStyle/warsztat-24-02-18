@@ -28,7 +28,7 @@ body{
 
 .time{
     position: absolute;
-    left: 95vw;
+    right: 5vw;
     top: 5vh;
     font-size: 3em;
     color: white;
