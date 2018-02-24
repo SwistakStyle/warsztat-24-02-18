@@ -1,6 +1,7 @@
-setInterval(
-    function (){
-        console.log('Minela sekunda')
-    },
-    1000
+var body = document.querySelector('body')
+body.addEventListener(
+    'click', 
+    function(){
+        console.log('Klik!')
+    }
 )
